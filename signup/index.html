@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        <form id="signupForm" onsubmit="return submitForm(event)">
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <div class="input-wrapper">
+                    <span class="icon">👤</span>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <span class="icon">🔒</span>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span class="toggle-password" onclick="togglePassword('password', 'togglePassword1')" id="togglePassword1">👁️</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="input-wrapper">
+                    <span class="icon">🔒</span>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                    <span class="toggle-password" onclick="togglePassword('confirmPassword', 'togglePassword2')" id="togglePassword2">👁️</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email ID</label>
+                <div class="input-wrapper">
+                    <span class="icon">📧</span>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <div class="input-wrapper">
+                    <span class="icon">📞</span>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="schoolName">School Name</label>
+                <div class="input-wrapper">
+                    <span class="icon">🏫</span>
+                    <select id="schoolName" name="schoolName" required>
+                        <option value="" disabled selected>Select your school</option>
+                        <option value="Neerja Modi World School">Neerja Modi World School</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="class">Class</label>
+                <div class="input-wrapper">
+                    <span class="icon">🏫</span>
+                    <input type="number" id="class" name="class" placeholder="Enter your class" required min="1" max="12">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="section">Section</label>
+                <div class="input-wrapper">
+                    <span class="icon">🏫</span>
+                    <input type="text" id="section" name="section" placeholder="Enter your section" required maxlength="1">
+                </div>
+            </div>
+
+            <input type="submit" value="Signup">
+
+            <div class="forgot">
+                Already a member? <a href="login.html">Login</a>
+            </div>
+        </form>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
