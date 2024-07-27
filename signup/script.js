@@ -1,3 +1,16 @@
+// Check if the user is logged in
+function checkLoginStatus() {
+    const username = localStorage.getItem('username');
+
+    // If a username is found in local storage, redirect to homepage
+    if (username) {
+        window.location.href = '/';
+    }
+}
+
+// Execute the check when the page loads
+document.addEventListener('DOMContentLoaded', checkLoginStatus);
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
 import { getFirestore, collection, doc, setDoc } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';

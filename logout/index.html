@@ -1,0 +1,10 @@
+<script>
+    function logout() {
+    // Remove the username from local storage
+    localStorage.removeItem('username');
+    
+    // Redirect to the login page
+    window.location.href = '/login';
+}
+logout();
+</script>
