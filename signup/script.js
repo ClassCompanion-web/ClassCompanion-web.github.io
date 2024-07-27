@@ -47,10 +47,12 @@ async function submitForm(event) {
         return;
     }
 
+    const hashedPassword = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
+
     try {
         await setDoc(doc(db, 'users', fullName), {
             fullName: fullName,
-            password: password,
+            password: hashedPassword,
             email: email,
             phone: phone,
             schoolName: schoolName,
@@ -61,6 +63,7 @@ async function submitForm(event) {
         alert('Signup successful!');
         document.getElementById('signupForm').reset();
         errorMessage.textContent = '';
+        window.location.href = '/login';
     } catch (error) {
         console.error('Error adding document: ', error);
         errorMessage.textContent = 'Error signing up, please try again';

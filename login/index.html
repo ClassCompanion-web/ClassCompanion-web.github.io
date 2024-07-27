@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return submitLoginForm(event)">
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <div class="input-wrapper">
+                    <span class="icon">👤</span>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <span class="icon">🔒</span>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span class="toggle-password" onclick="togglePassword('password', 'togglePassword')" id="togglePassword">👁️</span>
+                </div>
+            </div>
+
+            <input type="submit" value="Login">
+
+            <div class="forgot">
+                Not a member? <a href="/signup">Signup</a>
+            </div>
+        </form>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
