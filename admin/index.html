@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .user-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .user-card h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .user-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .user-info {
+            flex: 1;
+        }
+        .user-card button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .user-card button:hover {
+            background-color: #45a049;
+        }
+        .login-container {
+            text-align: center;
+            padding: 50px;
+        }
+        .login-container input[type="password"], .login-container input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .login-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container login-container" id="login-container">
+        <h1>Admin Login</h1>
+        <input type="password" id="admin-password" placeholder="Enter Admin Password" required>
+        <input type="submit" value="Login" onclick="adminLogin()">
+    </div>
+    <div class="container" id="user-container" style="display:none;">
+        <h1>Unverified Users</h1>
+        <div id="user-list">
+            <!-- User cards will be appended here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Include Firebase and the custom script -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

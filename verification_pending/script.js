@@ -29,7 +29,9 @@ async function checkVerificationStatus() {
             if (userSnap.exists()) {
                 const userData = userSnap.data();
                 if (userData.verification_pending) {
-                    window.location.href = '/verification_pending';
+                }
+                else {
+                    window.location.href = '/'
                 }
             } else {
                 console.error('No such document!');
