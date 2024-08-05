@@ -1,1 +1,1 @@
-"# ClassCompanion-web.github.io" 
+Class Companion Platform

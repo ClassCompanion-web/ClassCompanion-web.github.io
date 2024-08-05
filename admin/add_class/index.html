@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Class</h1>
+        <form id="addClassForm">
+            <label for="country">School Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <!-- Country options will be dynamically inserted here -->
+            </select>
+
+            <label for="school" class="disabled">School:</label>
+            <select id="school" name="school" required disabled>
+                <option value="">Select School</option>
+            </select>
+
+            <label for="grade" class="disabled">Grade:</label>
+            <select id="grade" name="grade" required disabled>
+                <option value="">Select Grade</option>
+                <!-- Grade options -->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+
+            <label for="section" class="disabled">Section:</label>
+            <input type="text" id="section" name="section" maxlength="1" required disabled>
+
+            <button type="submit" class="submit-button" disabled>Add Class</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Timetable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Timetable</h1>
+        <form id="addTimetableForm">
+            <label for="country">School Country:</label>
+            <select id="country" required>
+                <option value="">Select Country</option>
+                <!-- Options will be populated dynamically -->
+            </select>
+
+            <label for="school" class="disabled">School:</label>
+            <select id="school" disabled required>
+                <option value="">Select School</option>
+            </select>
+
+            <label for="class" class="disabled">Class:</label>
+            <select id="class" disabled required>
+                <option value="">Select Class</option>
+            </select>
+
+            <div id="timetableContainer" class="hidden">
+                <h2>Timetable</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Period</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody id="timetableBody">
+                        <!-- Timetable rows will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="submit" class="submit-button" disabled>Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
